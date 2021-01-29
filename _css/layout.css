@@ -24,6 +24,12 @@
   padding: 0;
 }
 
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
+
 @font-face {
   font-family: Syne;
   src: url(../fonts/overlock.ttf);
@@ -54,7 +60,7 @@ a {
 .main-header {
   width: 100%;
   background-color: #fff;
-  box-shadow: 0 4px 8px #777;
+  box-shadow: 0 2px 8px #777;
 }
 
 .header-content {
@@ -72,14 +78,21 @@ a {
 }
 
 .social-icons  {
-  width: 10%;
   display: flex;
   justify-content: space-between;
   position: relative;
   right: 150px;
 }
 
-.main-nav a {
+.social-icons a {
+  margin-right: 20px;
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+.main-nav li a {
   color: #e81c25;
   padding: 5px 20px;
   font-size: 16px;
@@ -89,7 +102,7 @@ a {
   transition: color 0.3s ease-in-out;
 }
 
-.main-nav a:last-child {
+.main-nav .last-link {
   border-right: none;
 }
 
@@ -135,7 +148,7 @@ a {
 .about-us {
   max-width: 95%;
   margin: 50px auto 0 auto;
-  border-top: 1px solid #777;
+  border-top: 2px solid #777;
   border-bottom: 1px solid #777;
 }
 
@@ -291,8 +304,6 @@ a {
   background-size: cover;
 }
 
-
-
 .story header {
   display: flex;
 }
@@ -335,7 +346,7 @@ a {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  border-bottom: 1px solid #777;
+  border-bottom: 2px solid #777;
 }
 
 .links {
@@ -347,9 +358,12 @@ a {
   margin-bottom: 10px;
 }
 
-.links a {
+.links li {
   display: flex;
   flex-direction: column;
+}
+
+.links a {
   color: #333;
   font-size: 18px;
   padding: 5px;
@@ -391,18 +405,29 @@ a {
 .map {
   width: 100%;
   height: 200px;
-  border: 1px solid #333;
+  border: 2px solid #333;
   background-image: url('../_imgs/map.jpg');
   background-position: center left;
   background-size: cover;
   background-repeat: no-repeat;
   filter: grayscale(100);
   transition: all 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .map:hover {
   filter: none;
   cursor: pointer;
+  transform: scale(1.1);
+}
+
+.map h5 {
+  text-transform: uppercase;
+  color: #e81c25;
+  padding: 5px;
+  background-color: #fff;
 }
 
 .sponsor-logos {
@@ -425,4 +450,194 @@ a {
   color: #fff;
   text-align: center;
   padding: 20px;
+}
+
+
+
+
+
+/********************************
+          MEDIA QUERIES
+********************************/
+@media only screen and (max-width: 699px) {
+
+  /********************************
+            Header Section
+  ********************************/
+  .header-content {
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-content img {
+    margin-bottom: 30px;
+  }
+
+  .social-icons  {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    right: 0;
+  }
+
+  .main-nav {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-nav li a {
+    color: #e81c25;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+
+
+  /********************************
+             Hero Section
+  ********************************/
+  .hero {
+    max-width: 95%;
+    height: 300px;
+  }
+
+
+
+  /********************************
+           About Us Section
+  ********************************/
+  .about-us {
+    max-width: 100%;
+    margin: 30px auto 0 auto;
+  }
+
+  .about-content {
+    width: 95%;
+  }
+
+
+
+  /********************************
+     Fxtures and Results Section
+  ********************************/
+  .fixture-and-results {
+    flex-direction: column;
+  }
+
+  .latest-result {
+    width: 100%;
+  }
+
+  .scores {
+    width: 10%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .scores h2 {
+    color: #fff;
+    margin: 30px 0;
+  }
+
+  .upcoming-fixtures {
+    width: 100%;
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+  }
+
+  .fixture-info th {
+  	font-size: 14px;
+  }
+
+  .fixture-info td {
+  	font-size: 14px;
+  }
+
+
+
+  /********************************
+        News & Events Section
+  ********************************/
+  .news-stories {
+    flex-direction: column;
+  }
+
+  .story-content {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .story-image {
+    height: 300px;
+    margin-bottom: 20px;
+  }
+
+  .story header h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+
+
+  /********************************
+            Footer Section
+  ********************************/
+  .info {
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 2px solid #777;
+  }
+
+  .links {
+    width: 100%;
+  }
+
+  .links h3 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .links li {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #333;
+  }
+
+  .stay-connected {
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  .find-us {
+    width: 100%;
+  }
+
+  .map {
+    width: 100%;
+    height: 250px;
+  }
+
+  .sponsor-logos {
+    margin: 30px 0;
+  }
+
+  .sponsor-logos img {
+    width: 50px;
+    margin: 10px;
+  }
+
+  .foot {
+    background-color: #e81c25;
+  }
+
+  .main-footer p {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
 }
