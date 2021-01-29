@@ -491,7 +491,8 @@ a {
   .main-nav li a {
     color: #e81c25;
     padding: 10px;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 700;
   }
 
 
@@ -515,7 +516,7 @@ a {
   }
 
   .about-content {
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
   }
 
