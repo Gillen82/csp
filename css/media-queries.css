@@ -1,0 +1,369 @@
+/********************************
+          MEDIA QUERIES
+********************************/
+@media only screen and (max-width: 1200px) {
+  /*Settings look good*/
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+  /********************************
+            Header Section
+  ********************************/
+  .social-icons  {
+    right: 100px;
+  }
+
+  .social-icons a {
+    margin-right: 10px;
+  }
+
+  .social-icons a:last-child {
+    margin-right: 0;
+  }
+
+  .main-nav li a {
+    color: #e81c25;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+
+  /********************************
+           About Us Section
+  ********************************/
+  .about-us {
+    max-width: 1200px;
+    margin: 50px auto 0 auto;
+    position: relative;
+    top: 100px;
+  }
+
+  .about-content {
+    width: 94%;
+    margin: 0 auto;
+    text-align: justify;
+
+  }
+
+  .about-content h1 {
+    font-size: 30px;
+    color: #e81c25;
+    margin: 20px 0;
+  }
+
+  .about-content p {
+    margin-bottom: 50px;
+  }
+
+
+  /********************************
+     Fxtures and Results Section
+  ********************************/
+  .fixture-and-results {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .latest-result {
+    width: 80%;
+  }
+
+  .teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .scores {
+    width: 20%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .scores h2 {
+    color: #fff;
+    margin: 20px 0;
+  }
+
+  .upcoming-fixtures {
+    width: 95%;
+    margin-top: 20px;
+  }
+
+
+
+  /********************************
+        News & Events Section
+  ********************************/
+  .news-and-events {
+    max-width: 94%;
+  }
+
+  .news-stories {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .story-content {
+    width: 49%;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  /********************************
+            Header Section
+  ********************************/
+  .header-content {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .club-logo {
+    width: 60px;
+    margin-bottom: 20px;
+  }
+
+  .social-icons  {
+    display: none;
+  }
+
+  .main-nav li a {
+    font-size: 14px;
+    border-right: none;
+  }
+
+
+  /********************************
+             Hero Section
+  ********************************/
+  .hero {
+    height: 50vh
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+
+  /********************************
+           About Us Section
+  ********************************/
+  .about-us {
+    max-width: 1200px;
+    margin: 50px auto 0 auto;
+    position: relative;
+    top: 100px;
+  }
+
+  .about-content h1 {
+    font-size: 25px;
+  }
+
+  .about-content p {
+    margin-bottom: 40px;
+    font-size: 14px;
+  }
+
+
+  /********************************
+     Fxtures and Results Section
+  ********************************/
+.fixtures-and-results h2 {
+  font-size: 25px;
+}
+
+  .latest-result {
+    width: 60%;
+  }
+
+  .latest-result img {
+    width: 25%;
+  }
+
+  .latest-result .vs {
+    width: 10%;
+  }
+
+  .scores {
+    width: 40%;
+  }
+
+  .upcoming-fixtures {
+    width: 95%;
+    margin-top: 20px;
+  }
+
+
+  /********************************
+        News & Events Section
+  ********************************/
+  .story-content {
+    width: 100%;
+  }
+
+
+  /********************************
+            Footer Section
+  ********************************/
+  .info {
+    flex-direction: column;
+  }
+
+  .links {
+    width: 100%;
+    margin: 10px 0 30px 0;
+  }
+
+  .stay-connected {
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  .find-us {
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  .sponsor-logos {
+    margin: 30px 0;
+  }
+}
+
+
+
+@media only screen and (max-width: 480px) {
+  /********************************
+            Header Section
+  ********************************/
+  .club-logo {
+    width: 80px;
+  }
+
+  .main-nav ul {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -100px;
+  }
+
+  .main-nav li {
+    margin-bottom: 30px;
+  }
+
+  .main-nav ul li a {
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  /*Hamburger Navigation*/
+  .hamburger-nav {
+    display: inline;
+  }
+
+
+  /********************************
+             Hero Section
+  ********************************/
+  .hero {
+    width: 100vw;
+    height: 50vh;
+  }
+
+  .hero h1 {
+    font-size: 25px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
+
+
+  /********************************
+     Fxtures and Results Section
+  ********************************/
+  .upcoming-fixtures {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .upcoming-fixtures h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .fixture-info {
+  	width: 100%;
+  }
+
+  .upcoming-fixtures th,   .upcoming-fixtures td {
+    font-size: 9px;
+  }
+
+  /********************************
+            Footer Section
+  ********************************/
+  .main-footer {
+    margin: auto;
+  }
+
+  .info {
+    padding: 20px;
+    flex-direction: column;
+    border-bottom: 2px solid #777;
+  }
+
+  .links {
+    width: 100%;
+  }
+
+  .stay-connected {
+    width: 100%;
+  }  margin-right: 15px;
+  }
+
+  .find-us {
+    width: 100%;
+  }
+
+  .sponsor-logos {
+    margin: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sponsor-logos img {
+    width: 60px;
+    margin: 5px;
+  }
+
+  .foot {
+    background-color: #e81c25;
+  }
+
+  .main-footer p {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+
+
+@media only screen and (max-width: 320px) {
+
+}

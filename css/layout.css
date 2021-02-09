@@ -28,7 +28,6 @@
 @-moz-viewport{width:device-width}
 @-ms-viewport{width:device-width}
 @-o-viewport{width:device-width}
-@viewport{width:device-width}
 
 @font-face {
   font-family: Syne;
@@ -59,12 +58,16 @@ a {
 ********************************/
 .main-header {
   width: 100%;
-  background-color: #fff;
+  background-color: rgba(255,255,255,.95);
   box-shadow: 0 2px 8px #777;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .header-content {
-  max-width: 95%;
+  max-width: 1200px;
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
@@ -108,6 +111,23 @@ a {
 
 .main-nav a:hover {
   color: #333;
+  cursor: pointer;
+}
+
+/*Hamburger Navigation*/
+.hamburger-nav {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: none;
+}
+
+.hamburger {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  border-radius: 10px;
+  margin-bottom: 5px;
 }
 
 
@@ -116,10 +136,12 @@ a {
            Hero Section
 ********************************/
 .hero {
-  max-width: 95%;
-  height: 400px;
+  max-width: 1200px;
+  height: 70vh;
   margin: auto;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../imgs/hero-background.jpg');
+  position: relative;
+  top: 100px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../imgs/hero-background.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -146,10 +168,10 @@ a {
          About Us Section
 ********************************/
 .about-us {
-  max-width: 95%;
+  max-width: 1200px;
   margin: 50px auto 0 auto;
-  border-top: 2px solid #777;
-  border-bottom: 1px solid #777;
+  position: relative;
+  top: 100px;
 }
 
 .about-content {
@@ -176,6 +198,8 @@ a {
 .fixture-and-results {
   max-width: 95%;
   margin: 0 auto 50px auto;
+  position: relative;
+  top: 100px;
   padding: 20px 20px;
   background-color: #000;
   display: flex;
@@ -236,6 +260,7 @@ a {
 .fixture-info td {
 	color: #fff;
 	padding: 5px;
+  font-size: 12px;
 }
 
 
@@ -244,10 +269,11 @@ a {
       News & Events Section
 ********************************/
 .news-and-events {
-  max-width: 95%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 50px 0;
-  border-top: 1px solid #333;
+  position: relative;
+  top: 100px;
 }
 
 .news-and-events h1 {
@@ -338,6 +364,8 @@ a {
   max-width: 95%;
   margin: 50px auto 0 auto;
   background-color: #fff;
+  position: relative;
+  top: 100px;
 }
 
 .info {
@@ -450,195 +478,4 @@ a {
   color: #fff;
   text-align: center;
   padding: 20px;
-}
-
-
-
-
-
-/********************************
-          MEDIA QUERIES
-********************************/
-@media only screen and (max-width: 699px) {
-
-  /********************************
-            Header Section
-  ********************************/
-  .header-content {
-    max-width: 95%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .header-content img {
-    margin-bottom: 30px;
-  }
-
-  .social-icons  {
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-    right: 0;
-  }
-
-  .main-nav {
-    width: 100%;
-    text-align: center;
-  }
-
-  .main-nav li a {
-    padding: 10px;
-    font-size: 20px;
-    font-weight: 700;
-  }
-
-
-
-  /********************************
-             Hero Section
-  ********************************/
-  .hero {
-    max-width: 95%;
-    height: 400px;
-  }
-
-
-
-  /********************************
-           About Us Section
-  ********************************/
-  .about-us {
-    max-width: 100%;
-    margin: 30px auto 0 auto;
-  }
-
-  .about-content {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-
-
-  /********************************
-     Fxtures and Results Section
-  ********************************/
-  .fixture-and-results {
-    flex-direction: column;
-  }
-
-  .latest-result {
-    width: 100%;
-  }
-
-  .scores {
-    width: 10%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .scores h2 {
-    color: #fff;
-    margin: 30px 0;
-  }
-
-  .upcoming-fixtures {
-    width: 100%;
-    border-top: 1px solid #fff;
-    padding-top: 20px;
-  }
-
-  .fixture-info th {
-  	font-size: 14px;
-  }
-
-  .fixture-info td {
-  	font-size: 14px;
-  }
-
-
-
-  /********************************
-        News & Events Section
-  ********************************/
-  .news-stories {
-    flex-direction: column;
-  }
-
-  .story-content {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-
-  .story-image {
-    height: 300px;
-    margin-bottom: 20px;
-  }
-
-  .story header h2 {
-    margin-bottom: 20px;
-    font-size: 30px;
-  }
-
-
-
-  /********************************
-            Footer Section
-  ********************************/
-  .info {
-    flex-direction: column;
-    text-align: center;
-    border-bottom: 2px solid #777;
-  }
-
-  .links {
-    width: 100%;
-  }
-
-  .links h3 {
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-
-  .links li {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 2px solid #333;
-  }
-
-  .stay-connected {
-    width: 100%;
-    margin: 30px 0;
-  }
-
-  .find-us {
-    width: 100%;
-  }
-
-  .map {
-    width: 100%;
-    height: 250px;
-  }
-
-  .sponsor-logos {
-    margin: 30px 0;
-  }
-
-  .sponsor-logos img {
-    width: 100px;
-    margin: 10px;
-  }
-
-  .foot {
-    background-color: #e81c25;
-  }
-
-  .main-footer p {
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-  }
-
 }
